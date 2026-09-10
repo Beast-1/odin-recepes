@@ -1,0 +1,8 @@
+node_modules
+dist
+.wrangler
+.DS_Store
+*.local
+npm-debug.log*
+
+*.tsbuildinfo
