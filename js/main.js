@@ -20,6 +20,18 @@
     setInterval(tick, 30000);
   }
 
+  /* ---------- Live GitHub stat (public API, no auth needed) ---------- */
+  const ghStatEl = document.getElementById('ghStat');
+  if (ghStatEl) {
+    fetch('https://api.github.com/users/Beast-1')
+      .then((res) => (res.ok ? res.json() : Promise.reject(res.status)))
+      .then((data) => {
+        const repos = data.public_repos ?? 0;
+        ghStatEl.textContent = `${repos} public repo${repos === 1 ? '' : 's'} on GitHub`;
+      })
+      .catch(() => { ghStatEl.remove(); });
+  }
+
   /* ---------- Nav scroll state ---------- */
   const nav = document.getElementById('nav');
   if (nav) {
