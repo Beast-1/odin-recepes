@@ -68,10 +68,12 @@
         },
         { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
       );
-      revealEls.forEach((el, i) => {
-        el.style.transitionDelay = `${Math.min(i % 6, 5) * 60}ms`;
-        io.observe(el);
+      document.querySelectorAll('section').forEach((section) => {
+        section.querySelectorAll('[data-reveal]').forEach((el, i) => {
+          el.style.transitionDelay = `${Math.min(i, 5) * 80}ms`;
+        });
       });
+      revealEls.forEach((el) => io.observe(el));
     }
   }
 
@@ -101,26 +103,33 @@
       particles = Array.from({ length: count }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
-        r: Math.random() * 1.4 + 0.4,
-        vy: (Math.random() * 0.5 + 0.2) * speed,
-        drift: (Math.random() - 0.5) * speed,
-        alpha: Math.random() * 0.5 + 0.2,
+        r: Math.random() * 1.3 + 0.4,
+        vy: (Math.random() * 0.4 + 0.15) * speed,
+        phase: Math.random() * Math.PI * 2,
+        swing: Math.random() * 10 + 4,
+        alpha: Math.random() * 0.4 + 0.15,
       }));
     }
 
-    function draw() {
+    let elapsed = 0;
+    let lastTime = null;
+
+    function draw(now) {
+      if (lastTime === null) lastTime = now;
+      const dt = Math.min(now - lastTime, 48);
+      lastTime = now;
+      elapsed += dt;
+
       ctx.clearRect(0, 0, width, height);
       ctx.fillStyle = '#ffffff';
       particles.forEach((p) => {
-        p.y -= p.vy;
-        p.x += p.drift;
+        p.y -= p.vy * (dt / 16.7);
         if (p.y < -4) p.y = height + 4;
-        if (p.x < -4) p.x = width + 4;
-        if (p.x > width + 4) p.x = -4;
+        const x = p.x + Math.sin(elapsed / 4000 + p.phase) * p.swing;
 
         ctx.globalAlpha = p.alpha;
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.arc(x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
       });
       ctx.globalAlpha = 1;
@@ -134,11 +143,15 @@
     });
 
     resize();
-    draw();
+    rafId = requestAnimationFrame(draw);
 
     document.addEventListener('visibilitychange', () => {
-      if (document.hidden) cancelAnimationFrame(rafId);
-      else draw();
+      if (document.hidden) {
+        cancelAnimationFrame(rafId);
+      } else {
+        lastTime = null;
+        rafId = requestAnimationFrame(draw);
+      }
     });
   }
 

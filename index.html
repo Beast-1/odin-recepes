@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Darpan Dahal — AI/ML &amp; Full-Stack Developer</title>
 <meta name="description" content="Portfolio of Darpan Dahal — AI/ML and full-stack developer building LLM agents, autonomous 3D generation, and production web apps." />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230a0a0c%22/><text x=%2250%22 y=%2266%22 font-family=%22monospace%22 font-size=%2258%22 font-weight=%22700%22 fill=%22%23ff3d7f%22 text-anchor=%22middle%22>d</text></svg>" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230a0a0c%22/><text x=%2250%22 y=%2268%22 font-family=%22Georgia,serif%22 font-style=%22italic%22 font-size=%2258%22 fill=%22%23ff3d7f%22 text-anchor=%22middle%22>D</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -17,7 +17,7 @@
 
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a href="#top" class="nav__brand">darpan<span class="cursor">_</span></a>
+    <a href="#top" class="nav__brand">Darpan</a>
     <nav class="nav__links" aria-label="Primary">
       <a href="#work">Work</a>
       <a href="#stack">Stack</a>
@@ -51,16 +51,15 @@
     <canvas id="particles" aria-hidden="true"></canvas>
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="container hero__inner">
-      <p class="eyebrow" data-reveal>[ AI/ML &middot; FULL-STACK ]</p>
-      <h1 class="hero__headline">
-        <span data-reveal>AI agents.</span>
-        <span data-reveal>3D generation.</span>
-        <span class="accent-text" data-reveal>Real products.</span>
+      <p class="eyebrow" data-reveal>AI/ML &amp; Full-Stack Development</p>
+      <h1 class="hero__headline hero__headline--prose" data-reveal>
+        Most of my work is teaching software to make its own decisions,
+        then making sure it still holds up once <em class="accent">real people</em> are using it.
       </h1>
       <p class="hero__sub" data-reveal>
-        I'm Darpan — an AI/ML and full-stack developer building LLM agents,
-        autonomous 3D-generation systems, and production web apps.
-        Based in Sikkim, India.
+        I'm Darpan, based in Sikkim, India. Right now that means building
+        LLM agents and an autonomous 3D-generation system called ARGUS,
+        alongside the ordinary web apps that put them in front of people.
       </p>
       <div class="hero__actions" data-reveal>
         <a href="#work" class="btn btn--primary">View my work</a>
@@ -79,7 +78,7 @@
 
   <section class="stack" id="stack">
     <div class="container">
-      <p class="eyebrow" data-reveal>[ TOOLBOX ]</p>
+      <p class="eyebrow" data-reveal>Toolbox</p>
       <div class="stack__grid" data-reveal>
         <div class="stack__item"><span>Python</span></div>
         <div class="stack__item"><span>React</span></div>
@@ -94,22 +93,24 @@
   <section class="about" id="about">
     <div class="container about__grid">
       <div data-reveal>
-        <p class="eyebrow">[ ABOUT ]</p>
-        <h2 class="section-title">Turning research into things people can actually use.</h2>
+        <p class="eyebrow">About</p>
+        <h2 class="section-title">The part after the demo is the part I actually like.</h2>
       </div>
       <div class="about__body" data-reveal>
         <p>
-          I like the part of AI/ML that most people skip past — taking an idea
-          that only works in a notebook and turning it into something
-          reliable enough to ship. That's meant building autonomous agents
-          on top of LLMs, an autonomous 3D-content pipeline called
-          <strong>ARGUS</strong>, and full-stack web apps to put it all in
-          front of real users.
+          Plenty of AI/ML work stops once something runs in a notebook.
+          I'm more interested in what happens after that: turning it into
+          software that holds up when other people depend on it. That's
+          been the throughline behind an autonomous 3D-content pipeline
+          I call <strong>ARGUS</strong>, a handful of LLM agents built for
+          specific jobs rather than general chat, and the web apps that
+          make any of it usable.
         </p>
         <p>
-          Day to day that's Python on the backend/ML side, React on the
-          frontend, Supabase for the boring-but-critical infrastructure, and
-          Flutter when the product needs to live on a phone.
+          Most days that's Python for the ML and backend work, React on
+          the frontend, Supabase handling the infrastructure I'd rather
+          not build myself, and Flutter when something needs to run on
+          a phone.
         </p>
       </div>
     </div>
@@ -117,8 +118,8 @@
 
   <section class="work" id="work">
     <div class="container">
-      <p class="eyebrow" data-reveal>[ FEATURED WORK ]</p>
-      <h2 class="section-title" data-reveal>Selected projects</h2>
+      <p class="eyebrow" data-reveal>Work</p>
+      <h2 class="section-title" data-reveal>A project worth mentioning</h2>
 
       <div class="work__grid">
         <article class="project-card project-card--feature" data-reveal>
@@ -128,9 +129,10 @@
           </div>
           <h3>ARGUS</h3>
           <p>
-            An autonomous pipeline for generating 3D content without manual
-            modeling — exploring how far an agentic system can go on a
-            spatial, creative task end to end.
+            A pipeline that generates 3D content without anyone modeling it
+            by hand. The interesting part isn't the output so much as how
+            much of that spatial, creative process an agent can be trusted
+            to run on its own.
           </p>
           <div class="project-card__tags">
             <span>Python</span><span>AI/ML</span><span>3D Generation</span>
@@ -140,7 +142,7 @@
 
         <article class="project-card project-card--cta" data-reveal>
           <h3>More on GitHub</h3>
-          <p>The rest of what I've been building — LLM agent experiments, web apps, and whatever's in progress right now.</p>
+          <p>Smaller experiments and whatever I'm currently in the middle of live there too.</p>
           <a class="btn btn--ghost" href="https://github.com/Beast-1" target="_blank" rel="noopener">github.com/Beast-1 ↗</a>
         </article>
       </div>
@@ -149,10 +151,11 @@
 
   <section class="process" id="process">
     <div class="container">
-      <p class="eyebrow" data-reveal>[ HOW I BUILD ]</p>
-      <h2 class="section-title" data-reveal>Explore. Build. Refine. Ship.</h2>
+      <p class="eyebrow" data-reveal>Process</p>
+      <h2 class="section-title" data-reveal>How this usually goes</h2>
       <p class="process__intro" data-reveal>
-        Four steps, repeated until the thing is actually good — not just done.
+        Roughly the same four stages every time, in whatever order the
+        project actually needs them.
       </p>
 
       <ol class="process__list">
@@ -160,28 +163,28 @@
           <span class="process__num">01</span>
           <div>
             <h3>Explore</h3>
-            <p>Understand the real problem before touching a single API or model.</p>
+            <p>Figure out what the problem actually is before opening an API reference.</p>
           </div>
         </li>
         <li data-reveal>
           <span class="process__num">02</span>
           <div>
             <h3>Build</h3>
-            <p>Get a working version in front of real data and real users, fast.</p>
+            <p>Get something working in front of real data quickly, even if it's rough.</p>
           </div>
         </li>
         <li data-reveal>
           <span class="process__num">03</span>
           <div>
             <h3>Refine</h3>
-            <p>Cut what doesn't earn its place. Fix what breaks under real use.</p>
+            <p>Cut the parts that don't earn their place, fix what breaks under real use.</p>
           </div>
         </li>
         <li data-reveal>
           <span class="process__num">04</span>
           <div>
             <h3>Ship</h3>
-            <p>Deployed, monitored, and actually in someone's hands — not a demo.</p>
+            <p>Out of my hands and into someone else's, not sitting in a demo folder.</p>
           </div>
         </li>
       </ol>
@@ -191,13 +194,13 @@
   <section class="cta" id="contact">
     <canvas id="particlesCta" aria-hidden="true"></canvas>
     <div class="container cta__inner">
-      <p class="eyebrow" data-reveal>[ CONTACT ]</p>
+      <p class="eyebrow" data-reveal>Contact</p>
       <h2 class="cta__headline" data-reveal>
-        Got an idea<br />worth <span class="accent-script">building</span>?
+        If it involves an agent<br />or a <em class="accent">3D pipeline</em>, I'm interested.
       </h2>
       <p class="cta__sub" data-reveal>
-        I'm always up for talking about AI agents, 3D pipelines, or
-        whatever product problem is currently stuck on your whiteboard.
+        Send me a note about what you're building and where it's stuck —
+        I'll tell you honestly whether I think I can help.
       </p>
       <div class="hero__actions" data-reveal>
         <a href="mailto:hello@example.com" class="btn btn--primary" id="emailLink">Say hello</a>
@@ -211,7 +214,7 @@
 <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <a href="#top" class="nav__brand">darpan<span class="cursor">_</span></a>
+      <a href="#top" class="nav__brand">Darpan</a>
       <p>AI/ML &amp; full-stack developer.<br />Sikkim, India.</p>
       <p class="footer__clock" id="localClock" aria-live="off"></p>
     </div>
@@ -233,7 +236,7 @@
   </div>
 
   <div class="container footer__bottom">
-    <p>&copy; <span id="year"></span> Darpan Dahal. Built from scratch, no template.</p>
+    <p>&copy; <span id="year"></span> Darpan Dahal.</p>
   </div>
 </footer>
 
